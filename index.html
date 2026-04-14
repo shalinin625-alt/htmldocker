@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Factorial Calculator</title>
+    <title>Factorial App</title>
 </head>
-<body style="text-align:center; margin-top:50px;">
-
+<body>
     <h2>Factorial Calculator</h2>
-
-    <input type="number" id="num" placeholder="Enter a number">
-    <button onclick="calculate()">Calculate</button>
-
-    <h3 id="result"></h3>
+    <input type="number" id="num">
+    <button onclick="calc()">Calculate</button>
+    <h3 id="res"></h3>
 
     <script>
-        function calculate() {
+        function calc(){
             let n = document.getElementById("num").value;
-            let fact = 1;
-
-            for (let i = 1; i <= n; i++) {
-                fact *= i;
-            }
-
-            document.getElementById("result").innerText = "Factorial = " + fact;
+            let f = 1;
+            for(let i=1;i<=n;i++) f*=i;
+            document.getElementById("res").innerText="Factorial = "+f;
         }
     </script>
-
 </body>
 </html>
